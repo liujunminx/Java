@@ -15,6 +15,7 @@ public class Test02 {
                 1, 2, 3, 4, 5
         };
         //直接比较地址
+        //equals比较的是地址
         System.out.println("arr1 == arr2: " + arr1.equals(arr2));
         System.out.println(arr1 + ", " + arr2);
     }
