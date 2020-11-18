@@ -5,6 +5,7 @@ select (case when A >= B then A else B end) MAX_BC, (case when C >= D then C els
 -- 设置某个字段缺省值
 alter table tb_name alter column_name set default xxx;
 # 某打车公司将驾驶里程（drivedistanced）超过5000里的司机信息转移到一张称为seniordrivers 的表中,他们的详细情况被记录在表drivers 中，正确的sql为（）
-select * into seniordrivers(drivedistanced) from drivers where drivedistanced > 5000
+select * into seniordrivers(drivedistanced) from drivers where drivedistanced > 5000;
 # 有订单表orders，包含字段用户信息userid，字段产品信息productid，以下语句能够返回至少被订购过两次的productid？（）
+# having过滤语句，接一个group by
 select productid from orders group by productid having count(productid) > 1;
