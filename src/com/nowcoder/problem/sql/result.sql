@@ -9,3 +9,5 @@ select * into seniordrivers(drivedistanced) from drivers where drivedistanced > 
 # 有订单表orders，包含字段用户信息userid，字段产品信息productid，以下语句能够返回至少被订购过两次的productid？（）
 # having过滤语句，接一个group by
 select productid from orders group by productid having count(productid) > 1;
+# 请读出borrow表中日期（rdate）为当天的所有记录？（rdate）字段为datetime型，包含日期和时间。SQL语句实现正确的是
+select * from borrow where datediff(rdate, current_date) = 0;
