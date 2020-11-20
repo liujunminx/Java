@@ -10,6 +10,7 @@ public class Test03 {
         String s = "hello world\0";
         //Double d = 100; 100是int，不可以从int转为double包装型
         double d = 100;
-
+        //int 2japro; 不可以数字开头命名
+        int _123;
     }
 }
