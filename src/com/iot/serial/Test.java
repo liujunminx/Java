@@ -8,17 +8,16 @@ import gnu.io.SerialPort;
 import gnu.io.SerialPortEvent;
 import gnu.io.SerialPortEventListener;
 
+import javax.tools.Tool;
+
 public class Test
 {
     static SerialPort sp=null;
     public static void main(String[] args){
         try{
-
             sp=SerialTool.openPort("COM5", 9600);
             if(sp!=null)
             {
-
-
                 try {
                     //给串口添加事件监听
                     sp.addEventListener(new SerialPortEventListener() {
@@ -43,11 +42,6 @@ public class Test
         catch(Exception ex){
             ex.printStackTrace();
         }
-
-
-
-        //SerialTool.closePort(sp);关闭端口通信
-
     }
 }
 
